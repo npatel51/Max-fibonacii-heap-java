@@ -6,7 +6,7 @@ public class Node {
     private String word;
     //pointer to parent node
     private Node parent;
-    private Node child;
+    private Node child;  // pointer to the left most child
     // used for circular doubly linked list
     private Node left;
     private Node right;
@@ -33,7 +33,7 @@ public class Node {
     }
 
     public void setFrequency(long frequency) {
-        this.frequency = frequency;
+        this.frequency+= frequency;
     }
 
     public String getWord() {
@@ -90,8 +90,8 @@ public class Node {
                 "degree=" + degree +
                 ", frequency=" + frequency +
                 ", word='" + word + '\'' +
-                ", left=" + left.getWord() +
-                ", right=" + right.getWord() +
+                ", left=" +(left==null?"null":left.getWord()) +
+                ", right=" +(right==null?"null":right.getWord()) +
                 ", childCut=" + childCut +
                 '}';
     }
