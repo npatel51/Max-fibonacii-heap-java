@@ -25,7 +25,7 @@ public class Node {
     }
 
     public void setDegree(int degree) {
-        this.degree = degree;
+        this.degree+= degree;
     }
 
     public long getFrequency() {
@@ -92,6 +92,8 @@ public class Node {
                 ", word='" + word + '\'' +
                 ", left=" +(left==null?"null":left.getWord()) +
                 ", right=" +(right==null?"null":right.getWord()) +
+                ", child=" +(child==null?"null":child.getWord()) +
+                ", parent=" +(parent==null?"null":parent.getWord()) +
                 ", childCut=" + childCut +
                 '}';
     }

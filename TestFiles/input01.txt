@@ -22,4 +22,29 @@ $ebay 12
 $netflix 6
 $cnn 5
 5
+$facebook 12
+$amazon 2
+$stop 3
+$playing 4
+$gmail 15
+$drawing 3
+$ebay 12
+$netflix 6
+$cnn 5
+7
+$weather 24
+$facebook 46
+$youtube 48
+6
+$ebay 2
+$news 2
+2
+$special 10000
+1
+$spotify 4200
+1
+$spotify 4200
+1
+$spotify 42000
+6
 stop
