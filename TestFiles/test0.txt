@@ -9,4 +9,8 @@ $one 11
 $two 50
 $three 3
 5
+$six 50
+$two 1
+$five 10
+5
 stop

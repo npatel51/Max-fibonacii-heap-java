@@ -9,6 +9,7 @@ import java.util.*;
 public class KeyWordCounter {
     public static void main(String[] args) throws IOException, InvalidArgumentException {
         BufferedReader reader = null;
+
         PriorityQueue<Node> pq = new PriorityQueue<>(new Comparator<Node>() {
             @Override
             public int compare(Node o1, Node o2) {
@@ -17,7 +18,7 @@ public class KeyWordCounter {
         });
 
         try {
-            reader = new BufferedReader(new FileReader("N:\\UF Fall 2018\\AdvDS\\MaxFibonaciiHeap\\TestFiles\\input01.txt"));
+            reader = new BufferedReader(new FileReader("N:\\UF Fall 2018\\AdvDS\\MaxFibonaciiHeap\\TestFiles\\test1.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("Unable ro read file.");
@@ -39,7 +40,7 @@ public class KeyWordCounter {
                     mfhp.increaseKey(n,Long.parseLong(nodeInfo[1]));
                 }
             } else {
-                //   mfhp.print();
+                // mfhp.print();
                 // System.out.println(mfhp.topKWords(Integer.parseInt(nodeInfo[0])));
                 // mfhp.print();
                 int k = Integer.parseInt(nodeInfo[0]);
@@ -53,11 +54,8 @@ public class KeyWordCounter {
                     pq.add(entries.get(i));
                 }
                 List<String> result = mfhp.topKWords(k);
-
                 assert expected.equals(result);
-
             }
         }
-
     }
 }

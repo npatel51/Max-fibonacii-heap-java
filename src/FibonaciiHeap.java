@@ -23,6 +23,14 @@ public class FibonaciiHeap {
         return newNode;
     }
 
+    /**
+     * Insert the new node in the circular list, updates the max pointer as needed
+     * The new node is inserted as a child of the parent node, if the parent doesn't
+     * have a child then just simple add the new node as a child. If there is a
+     * child node present then insert the child into the circular doubly list
+     * @param newNode - new node to be inserted in the circular list
+     * @param parent - parent of the new node
+     */
     private void insert(Node newNode, Node parent) {
         if( newNode == null ) return ;
 
@@ -45,8 +53,7 @@ public class FibonaciiHeap {
         parent.setChild(newNode);
         parent.setChildCut(false);
         newNode.setParent(parent);
-      //  System.out.println("-------------insert new node ----------------");
-        //System.out.println("child => "+newNode+ " \npraent=>"+parent);
+
         if (maxPointerNode == null ) {
             maxPointerNode = parent==root?newNode:parent;
         }else{
