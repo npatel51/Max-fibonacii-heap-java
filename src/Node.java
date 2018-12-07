@@ -12,7 +12,7 @@ public class Node {
     private Node right;
     //True if node has lost a child since it became a child of its current parent.
     //Set to false by remove min, which is the only operation that makes one node a child of another.
-    private boolean childCut;
+    private boolean childCut =false;
 
 
     public Node(String word, long frequency) {
@@ -24,8 +24,15 @@ public class Node {
         return degree;
     }
 
-    public void setDegree(int degree) {
-        this.degree+= degree;
+    public void incrementDegree() {
+        this.degree++;
+    }
+    public void decrementDegree() {
+        this.degree--;
+    }
+
+    public void setDegree(int degree){
+        this.degree = 0;
     }
 
     public long getFrequency() {
@@ -83,8 +90,18 @@ public class Node {
     public void setChildCut(boolean childCut) {
         this.childCut = childCut;
     }
+    public boolean getChildCut() {
+        return childCut;
+    }
 
-
+    public void reset(){
+        this.setLeft(null);
+        this.setRight(null);
+        this.setChild(null);
+        this.setParent(null);
+        this.setDegree(0);
+        this.setChildCut(false);
+    }
 
     @Override
     public String toString() {

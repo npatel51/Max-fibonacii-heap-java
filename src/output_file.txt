@@ -1,0 +1,9 @@
+facebook,youtube,amazon
+facebook,youtube,gmail,ebay,amazon
+facebook,gmail,ebay,youtube,netflix,amazon,cnn
+facebook,youtube,gmail,ebay,weather,netflix
+facebook,youtube
+special
+special
+special
+spotify,special,facebook,youtube,gmail,ebay
